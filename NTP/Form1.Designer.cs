@@ -47,7 +47,8 @@ namespace NTP
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 363);
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(12, 380);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(334, 20);
             this.label1.TabIndex = 1;
@@ -56,6 +57,8 @@ namespace NTP
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -66,6 +69,7 @@ namespace NTP
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
